@@ -1,0 +1,26 @@
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test]
+    async fn test_patient_interact() {
+        let chart = EpicChart {
+            patient_id: "P001".to_string(),
+            vitals: HashMap::new(),
+            meds_ordered: vec![],
+        };
+        let preferences = UserPreferences {
+            role: "Patient".to_string(),
+            language: "English".to_string(),
+            voice_enabled: false,
+        };
+        let hospital_network = HospitalNetwork::new();
+
+        let agent = AgentBuilder::new(chart, hospital_network, preferences, AgentMode::Patient)
+            .add_tool(VitalsChecker)
+            .build();
+
+        let response = agent.interact("How am I doing?", false).await.unwrap();
+        assert!(response.contains("Here’s your status"));
+    }
+}

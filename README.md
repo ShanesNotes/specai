@@ -4,11 +4,11 @@ Healthcare AI Agent - with executable task functions like real-time monitoring a
 A Rust-based AI agent optimizing nurse workflows and patient care, built with the Rig framework (from ARC) and ARC on Solana, inspired by Piotr Ostr’s (@piotrostr) Listen toolkit (https://github.com/piotrostr/listen). SpecAI is a "Healthcare Leatherman" blending simulated healthcare expertise with modular chatbot capabilities.
 
 ## Features
-- **Healthcare Expertise**: Simulated IV compatibility, workflows (Veteran 14+ years Critical Care RN expertise).
-- **Chatbot**: Voice-enabled banter (e.g., “Tell me about your day”).
+- **Healthcare Expertise**: workflows, data validation, troubleshooting (Veteran 14+ years Critical Care RN expertise).
+- **Modularity**: Rig’s AgentBuilder (from ARC) and Listen’s CLI toolkit (@piotrostr).
 - **Security**: ARC blockchain logging with SHA-256; Epic FHIR API simulation with OAuth 2.0 placeholder.
 - **Documentation**: Simulated immutable trails on Solana/Epic (requires live integration).
-- **Modularity**: Rig’s AgentBuilder (from ARC) and Listen’s CLI toolkit (@piotrostr).
+- **Chatbot**: Voice-enabled bedside clinical assistant (e.g., “Tell me about your day”).
 
 **Note**: APIs (Epic FHIR, Philips IntelliVue, voice) are simulated using open-source data (OpenEMR, Tidepool). Live functionality requires corporate approval and integration.
 

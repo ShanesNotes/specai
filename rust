@@ -1,0 +1,4 @@
+// Placeholder for future modularity - separates agent logic from CLI
+pub mod agent {
+    // Future implementation: Move NurseAgent and AgentBuilder here
+}

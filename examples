@@ -1,0 +1,26 @@
+use specai_agent::AgentBuilder;
+use specai_agent::VitalsChecker;
+use specai_agent::{AgentMode, EpicChart, UserPreferences, HospitalNetwork};
+
+#[tokio::main]
+async fn main() {
+    let chart = EpicChart {
+        patient_id: "P001".to_string(),
+        vitals: HashMap::new(),
+        meds_ordered: vec![],
+    };
+    let preferences = UserPreferences {
+        role: "Patient".to_string(),
+        language: "English".to_string(),
+        voice_enabled: true,
+    };
+    let hospital_network = HospitalNetwork::new();
+
+    let agent = AgentBuilder::new(chart, hospital_network, preferences, AgentMode::Patient)
+        .add_tool(VitalsChecker)
+        .add_context("Critical care tip: Always check IV lines for kinks if flow stops.")
+        .build();
+
+    println!("Healthcare: {}", agent.interact("How am I doing?", true).await.unwrap());
+    println!("Chatbot: {}", agent.interact("Tell me about your day", true).await.unwrap());
+}

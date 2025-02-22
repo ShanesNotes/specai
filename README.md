@@ -1,4 +1,4 @@
-# specai
+# Specai
 Healthcare AI Agent - with executable task functions like real-time monitoring and EHR documentation. Also with modular chatbot integration for bedside assistive clinical resource
 
 A Rust-based AI agent optimizing nurse workflows and patient care, built with the Rig framework (from ARC) and ARC on Solana, inspired by Piotr Ostr’s (@piotrostr) Listen toolkit (https://github.com/piotrostr/listen). SpecAI is a "Healthcare Leatherman" blending simulated healthcare expertise with modular chatbot capabilities.

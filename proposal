@@ -1,0 +1,23 @@
+# SpecAI Handshakes Proposal
+
+## Overview
+SpecAI optimizes nurse workflows and patient care, built in Rust with Rig (from ARC) and ARC on Solana. Inspired by @piotrostr’s Listen toolkit, it’s a "Healthcare Leatherman" with simulated healthcare expertise and chatbot modes.
+
+## Goals
+- Optimize workflows via first-principles (assess, treat, etc.).
+- Securely log via ARC/Epic with SHA-256 and OAuth 2.0 (simulated, live TBD).
+- Engage community with “SpecAI Handshakes,” leveraging Listen’s versatility (@piotrostr).
+
+## Technical Details
+- **Rust**: Performance/safety (Listen-inspired, @piotrostr).
+- **Rig**: Modular AgentBuilder (https://github.com/0xPlaygrounds/rig).
+- **ARC**: Blockchain logging.
+- **Epic**: Simulated FHIR API integration (OpenEMR-based).
+- **Pipeline**: Task prioritization (Listen’s Trading Engine, @piotrostr).
+
+## Demo
+`cargo run -- release -- interact "How am I doing?" --voice`
+
+## Timeline
+- Submission: May 1, 2025
+- Launch: July 1, 2025

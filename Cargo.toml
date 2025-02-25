@@ -1,0 +1,15 @@
+[package]
+name = "specai-agent"
+version = "0.1.0"
+edition = "2021"
+description = "Healthcare AI Agent with Chatbot Capabilities - Inspired by @piotrostr's Listen and Rig from ARC"
+
+[dependencies]
+tract-onnx = "0.20" # Placeholder for ONNX model (Grok 3 TBD)
+tokio = { version = "1.0", features = ["full"] } # Async runtime
+futures = "0.3" # Async utilities
+serde = { version = "1.0", features = ["derive"] } # Serialization
+clap = { version = "4.0", features = ["derive"] } # CLI parsing, Listen-inspired (@piotrostr)
+async-trait = "0.1" # Async traits for Rig tools
+sha2 = "0.10" # SHA-256 hashing for ARC security
+rand = "0.8" # Random number generation for vital streams
